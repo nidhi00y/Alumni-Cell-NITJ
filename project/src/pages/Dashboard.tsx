@@ -287,44 +287,7 @@ const Dashboard: React.FC = () => {
 
           {/* Notifications */}
           <div>
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="p-6 border-b border-gray-100">
-                <h2 className="text-lg font-semibold text-gray-900">Notifications</h2>
-              </div>
-              <div className="divide-y divide-gray-100">
-                {notifications.map((notification) => (
-                  <a
-                    key={notification.id}
-                    href={notification.link}
-                    className="block p-6 hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center">
-                      <div className={`p-2 rounded-lg ${
-                        notification.type === 'event' ? 'bg-purple-100 text-purple-600' :
-                        notification.type === 'job' ? 'bg-green-100 text-green-600' :
-                        'bg-blue-100 text-blue-600'
-                      }`}>
-                        {notification.type === 'event' ? <Calendar className="h-5 w-5" /> :
-                         notification.type === 'job' ? <Briefcase className="h-5 w-5" /> :
-                         <Users className="h-5 w-5" />}
-                      </div>
-                      <div className="ml-4 flex-1">
-                        <h3 className="text-sm font-medium text-gray-900">
-                          {notification.title}
-                        </h3>
-                        <p className="text-sm text-gray-500">
-                          {notification.description}
-                        </p>
-                        <p className="text-xs text-gray-400 mt-1">
-                          {notification.date}
-                        </p>
-                      </div>
-                      <ExternalLink className="h-4 w-4 text-gray-400" />
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
+           
 
             {/* Resources */}
             <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">

@@ -56,13 +56,13 @@ export default function Home() {
 
   const achievements = [
     {
-      number: "10,000+",
-      label: "Alumni Worldwide",
+      number: "5,000+",
+      label: "Students",
       icon: Users
     },
     {
-      number: "500+",
-      label: "Companies Hiring",
+      number: "18+",
+      label: "Departments",
       icon: Building2
     },
     {
@@ -71,42 +71,40 @@ export default function Home() {
       icon: Trophy
     },
     {
-      number: "50+",
-      label: "Countries Represented",
+      number: "58",
+      label: "NIRF Ranking",
       icon: Globe2
     }
   ];
 
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      batch: "2015",
-      role: "Senior Software Engineer at Google",
+      name: "Manpreet Sharma",
+      batch: "2016",
+      role: "UPSC Civil Servent",
       quote: "NITJ gave me the foundation to build a successful career in tech. The alumni network has been invaluable.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLv5BrzRQa6t8K1vgvu_85nz0Unj5EeJYtw&s"
     },
     {
-      name: "Priya Singh",
-      batch: "2018",
-      role: "Product Manager at Microsoft",
+      name: "Mr. Prince Kumar Singh",
+      batch: "2016",
+      role: "UPSC Civil Servent",
       quote: "The mentorship from alumni helped me navigate my career path. Forever grateful to the NITJ community.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNShnqxdByyvoxnwQ_uYuDTtx9gBxv8u3nzw&s"
     },
     {
-      name: "Amit Patel",
-      batch: "2012",
-      role: "Founder & CEO, TechStart",
-      quote: "NITJ's entrepreneurial spirit and network helped me build my startup from ground up.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+      name: "Mr Preminder Singh",
+      batch: "1994",
+      role: "Product Engineering @APPLE",
+      quote: "NITJ's product development, design validation, and manufacturing processes, ensuring high-quality standards",
+      image: "https://nitj.ac.in/files/1727496858488-WhatsApp%20Image%202024-09-27%20at%205.09.53%20PM.jpeg"
     }
   ];
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Events', path: '/events' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'About', path: 'https://www.nitj.ac.in/admin/index.html' },
+    { name: 'Contact', to: '#contact' }
   ];
 
   useEffect(() => {
@@ -280,7 +278,7 @@ export default function Home() {
         </div>
 
         {/* Achievement Numbers */}
-        <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 py-16 px-8 mx-20 rounded-2xl shadow-xl">
+        <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 py-10 px-8 mx-20 rounded-2xl shadow-xl">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {achievements.map((achievement, index) => (
@@ -388,9 +386,9 @@ export default function Home() {
             </div>
             <div className="relative h-[400px]">
               <img
-                src="https://images.unsplash.com/photo-1562774053-701939374585?w=1920&h=1080&fit=crop"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/NITJ_bldg.jpg/800px-NITJ_bldg.jpg"
                 alt="Campus"
-                className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover transform hover:scale-103 transition-all duration-500"
               />
             </div>
           </div>
@@ -439,8 +437,8 @@ export default function Home() {
         </div>
 
         {/* Enhanced Footer */}
-        <footer className="bg-gray-900 text-white py-16">
-          <div className="container mx-auto px-6">
+        <footer className="bg-gray-900 text-white py-16" id="contact">
+          <div className="container mx-auto px-6" >
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
               {/* About */}
               <div>
@@ -462,27 +460,12 @@ export default function Home() {
                       About Us
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/events" className="text-gray-400 hover:text-white transition-colors">
-                      Events
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/gallery" className="text-gray-400 hover:text-white transition-colors">
-                      Gallery
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                      Contact
-                    </Link>
-                  </li>
                 </ul>
               </div>
 
               {/* Contact Info */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+                <h3 className="text-lg font-semibold mb-4" >Contact Us</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-indigo-400" />
